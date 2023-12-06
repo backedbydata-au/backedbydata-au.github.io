@@ -35,6 +35,10 @@ div.my_list {
     padding-top: 1em;
     padding-bottom: 2em;
 }
+div.indent {
+	text-indent: 3em;
+}
+
 ul.my_list {
     list-style-type: none;
     padding: 0; /* Remove padding */
@@ -45,6 +49,9 @@ li.my_list {
 }
 p.my_para{
     text-align: justify;
+}
+p.uppercase {
+	text-transform: uppercase;
 }
 
 
@@ -108,7 +115,7 @@ input, select, textarea {
 	html {
 		background-color: #313a3d;
 		background-attachment: fixed,						fixed;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background: #000000;
 		background-position: top left,					center center;
 		background-repeat: repeat,						none;
 		background-size: auto,						cover;
@@ -140,7 +147,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #6f7577;
-		font-family: "Raleway", "Helvetica", sans-serif;
+		font-family: /*"Raleway", "Helvetica",*/ sans-serif;
 		font-size: 15pt;
 		font-weight: 400;
 		line-height: 1.75em;
@@ -152,18 +159,18 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #8cd1a8;
+		color: #8c52fe;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent !important;
-			color: #8cd1a8 !important;
+			color: #8c52fe !important;
 			text-decoration: none;
 		}
 
 	strong, b {
-		color: #61686b;
+		color: #8c52fe;
 		font-weight: 700;
 	}
 
@@ -175,13 +182,22 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
-		color: #61686b;
+	h1 {
+		color: #8c52fe;
+		font-weight: 800;
+		/*letter-spacing: 0.075em;*/
+		line-height: 1em;
+		margin: 0 0 1em 0.5em;
+		text-indent: -0.5em;
+		/*text-transform: uppercase;*/
+	}
+	h2, h3, h4, h5, h6 {
+		color: #8c52fe;
 		font-weight: 800;
 		letter-spacing: 0.075em;
 		line-height: 1em;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
+		/*text-transform: uppercase;*/
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1953,7 +1969,7 @@ input, select, textarea {
 	header p {
 		color: #a8b0b3;
 		letter-spacing: 0.05em;
-		text-transform: uppercase;
+		/*text-transform: uppercase;*/
 	}
 
 	header h1 + p {
@@ -2044,7 +2060,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: inset 0 0 0 2px #8cd1a8;
+			box-shadow: inset 0 0 0 2px #8c52fe;
 		}
 
 	select {
@@ -2146,7 +2162,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: inset 0 0 0 2px #8cd1a8;
+			box-shadow: inset 0 0 0 2px #8c52fe;
 		}
 
 	input[type="radio"] + label:before {
@@ -2680,7 +2696,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #8cd1a8;
+			background-color: #8c52fe;
 			border: 0;
 			box-shadow: none;
 			color: #ffffff !important;
@@ -2691,7 +2707,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #9ed8b6;
+				background-color: #8c52fe;
 			}
 
 			input[type="submit"].primary:active,
@@ -2699,7 +2715,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #7aca9a;
+				background-color: #8c52fe;
 			}
 
 			input[type="submit"].primary.icon:before,
@@ -2825,7 +2841,7 @@ input, select, textarea {
 		}
 
 		#header header {
-			color: rgba(255, 255, 255, 0.5);
+			color: #ffffff;
 			display: inline-block;
 			padding-bottom: 8em;
 			vertical-align: middle;
@@ -2836,7 +2852,7 @@ input, select, textarea {
 			}
 
 			#header header a {
-				color: inherit;
+				color: #ffffff;
 			}
 
 				#header header a:hover {
@@ -2860,7 +2876,7 @@ input, select, textarea {
 			}
 
 		#header .container {
-			background: rgba(255, 255, 255, 0.95);
+			background: #ffffff;
 			bottom: 0;
 			left: 50%;
 			margin-left: -17.5em;
